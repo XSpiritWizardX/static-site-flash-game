@@ -1,0 +1,5 @@
+staticSites:
+  - name: color-quest-garden
+    buildCommand: 'echo no build'
+    publishPath: .
+    pullRequestPreviewsEnabled: true

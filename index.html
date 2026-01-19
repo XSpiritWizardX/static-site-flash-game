@@ -1,76 +1,40 @@
 <!doctype html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1' />
-  <title>Color Quest Garden</title>
-  <link rel='stylesheet' href='styles.css' />
-</head>
-<body>
-  <div class='background' aria-hidden='true'>
-    <span class='blob blob-a'></span>
-    <span class='blob blob-b'></span>
-    <span class='blob blob-c'></span>
-  </div>
-
-  <main class='page'>
-    <header class='top'>
-      <div class='brand'>
-        <p class='eyebrow'>No backend, all fun</p>
-        <h1>Color Quest Garden</h1>
-        <p class='subhead'>Match the shape and color to earn stars.</p>
-      </div>
-
-      <div class='stats' aria-live='polite'>
-        <div class='stat'>
-          <span class='stat-label'>Stars</span>
-          <span class='stat-value' id='score'>0</span>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>static-site-flash-game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <strong>static-site-flash-game</strong>
+        <a class="button" href="#pricing">Get Early Access</a>
+      </header>
+      <section class="card">
+        <h1>static-site-flash-game keeps your team focused.</h1>
+        <p>A focused SaaS that helps teams ship faster.</p>
+        <div class="button">Join the waitlist</div>
+      </section>
+      <section>
+        <h2>Features</h2>
+        <div class="card">
+          <p>Signal tracking, playbooks, and clear next steps in one place.</p>
         </div>
-        <div class='stat'>
-          <span class='stat-label'>Streak</span>
-          <span class='stat-value' id='streak'>0</span>
+      </section>
+      <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="card">
+          <p>Simple plans that scale with your revenue.</p>
         </div>
-        <div class='stat'>
-          <span class='stat-label'>Rounds</span>
-          <span class='stat-value' id='rounds'>0</span>
+      </section>
+      <section>
+        <h2>FAQ</h2>
+        <div class="card">
+          <p>How fast can we launch? Typically in days.</p>
         </div>
-      </div>
-
-      <div class='controls'>
-        <button class='btn primary' type='button' id='newRoundBtn'>New Garden</button>
-        <button class='btn' type='button' id='resetBtn'>Reset Stars</button>
-        <button class='btn' type='button' id='soundToggle' aria-pressed='true'>Sound: On</button>
-
-        <label class='select-wrap'>
-          <span>Difficulty</span>
-          <select id='difficulty'>
-            <option value='easy'>Easy</option>
-            <option value='medium' selected>Medium</option>
-            <option value='hard'>Hard</option>
-          </select>
-        </label>
-      </div>
-    </header>
-
-    <section class='play'>
-      <div class='target-card' id='targetCard'>
-        <p class='target-title'>Find this</p>
-        <div class='target-shape' id='targetShape'></div>
-        <p class='target-label' id='targetLabel'>Tap a tile to start.</p>
-      </div>
-
-      <div class='message' id='message' role='status' aria-live='polite'>
-        Tap a tile to start.
-      </div>
-
-      <div class='grid' id='grid' role='grid' aria-label='Shape tiles'></div>
-    </section>
-
-    <footer class='footer'>
-      Tip: Take your time. The colors and shapes always match the card on the left.
-    </footer>
-  </main>
-
-  <script src='app.js' defer></script>
-</body>
+      </section>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,1 @@
+Create `assets/game.js` to render and manage the game UI, maintain state (idle/playing/complete), and handle user input. Add a game container section and scoreboard to `index.html`, and include the script tag. Use deterministic randomization for repeatability, and expose small helpers for later tests.

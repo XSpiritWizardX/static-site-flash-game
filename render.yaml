@@ -1,4 +1,6 @@
 staticSites:
+    env: docker
+    dockerfilePath: Dockerfile
   - name: color-quest-garden
     buildCommand: 'echo no build'
     publishPath: .

@@ -1,15 +1,16 @@
 .page {
-  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
 .hero {
-  background-color: #f0f0f0;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .reveal {
-  animation-name: reveal;
-  animation-duration: 2s;
+  animation: reveal 2s forwards;
 }
 
 @keyframes reveal {

@@ -1,28 +1,24 @@
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      obs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
+const revealItems = document.querySelectorAll('.reveal');
+const waitlistForm = document.getElementById('waitlist-form');
+const waitlistMessage = document.getElementById('waitlist-message');
 
-reveals.forEach((el) => observer.observe(el));
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
 
-const form = document.getElementById('waitlist-form');
-const note = document.getElementById('waitlist-note');
+revealItems.forEach(item => observer.observe(item));
 
-if (form && note) {
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const email = data.get('email');
-    if (!email) {
-      return;
-    }
-    note.textContent = 'Thanks, ' + email + ' is in line for early access.';
-    note.classList.add('success');
-    form.reset();
-  });
-}
+waitlistForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const email = new FormData(waitlistForm).get('email');
+  waitlistMessage.textContent = `Thanks, ${email}. You are on the list.`;
+  waitlistForm.reset();
+});

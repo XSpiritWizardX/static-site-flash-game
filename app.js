@@ -1,47 +1,49 @@
-const revealItems = document.querySelectorAll('.reveal');
+const revealEls = document.querySelectorAll('.reveal');
 
-const revealObserver = new IntersectionObserver(
-  (entries, observer) => {
+const observer = new IntersectionObserver(
+  (entries) => {
     entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
     });
   },
-  { threshold: 0.14 }
+  { threshold: 0.18 }
 );
 
-revealItems.forEach((item) => revealObserver.observe(item));
+revealEls.forEach((el) => observer.observe(el));
 
-const form = document.getElementById('waitlistForm');
-const emailInput = document.getElementById('emailInput');
-const formMsg = document.getElementById('formMsg');
+const form = document.getElementById('waitlist-form');
+const emailInput = document.getElementById('email');
+const statusEl = document.getElementById('form-status');
 
-if (form && emailInput && formMsg) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const email = emailInput.value.trim();
-    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-    formMsg.className = 'form-msg';
-
-    if (!valid) {
-      formMsg.textContent = 'Enter a valid email to join the waitlist.';
-      formMsg.classList.add('err');
-      return;
-    }
-
-    const btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.textContent = 'Saving...';
-
-    setTimeout(() => {
-      formMsg.textContent = 'You are in. Invite link and launch kit sent soon.';
-      formMsg.classList.add('ok');
-      form.reset();
-      btn.disabled = false;
-      btn.textContent = 'Reserve Spot';
-    }, 700);
-  });
+const saved = localStorage.getItem('ssfg_waitlist_email');
+if (saved) {
+  emailInput.value = saved;
+  statusEl.textContent = 'You are already on the waitlist.';
 }
+
+form?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const email = emailInput.value.trim();
+
+  if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+    statusEl.textContent = 'Enter a valid email address.';
+    return;
+  }
+
+  const button = form.querySelector('button');
+  const prevText = button.textContent;
+  button.disabled = true;
+  button.textContent = 'Joining...';
+  statusEl.textContent = 'Submitting request...';
+
+  setTimeout(() => {
+    localStorage.setItem('ssfg_waitlist_email', email);
+    statusEl.textContent = 'Access request received. Check your inbox for next drop.';
+    button.disabled = false;
+    button.textContent = prevText;
+    form.reset();
+  }, 700);
+});

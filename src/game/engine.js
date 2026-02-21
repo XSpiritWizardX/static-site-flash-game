@@ -1,0 +1,1 @@
+Implement pure functions/classes for `createGame`, `flipCard`, `tick`, and `resetGame` using a seedable shuffle for repeatable rounds. Expose events/state snapshots that UI can render. Include rules for mismatch penalties, streak bonuses, and timeout loss condition.

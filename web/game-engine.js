@@ -1,0 +1,1 @@
+Add `createGame({ mode, seed })`, `selectCard(id)`, `tick(ms)`, `undo()`, and `getSnapshot()` APIs. Implement combo scoring (+streak multiplier), mistake penalties, and win/lose conditions. Wire the existing boot flow to use this engine so behavior is consistent and testable.

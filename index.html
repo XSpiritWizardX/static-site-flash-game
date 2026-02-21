@@ -1,183 +1,104 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>static-site-flash-game</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='styles.css'>
   </head>
   <body>
-    <div class="page">
-      <div class="orb orb--one"></div>
-      <div class="orb orb--two"></div>
-      <div class="orb orb--three"></div>
-      <div class="shell">
-        <header class="nav">
-          <div class="logo">static-site-flash-game</div>
-          <nav class="nav-links">
-            <a href="#features">Features</a>
-            <a href="#workflow">Workflow</a>
-            <a href="#pricing">Pricing</a>
+    <div class='page'>
+      <div class='orb orb--one'></div>
+      <div class='orb orb--two'></div>
+      <div class='orb orb--three'></div>
+
+      <div class='shell'>
+        <header class='nav reveal'>
+          <div class='logo'>static-site-flash-game</div>
+          <nav class='nav-links'>
+            <a href='#features'>Features</a>
+            <a href='#workflow'>Workflow</a>
+            <a href='#pricing'>Pricing</a>
           </nav>
-          <a class="button button--ghost" href="#cta">Get Access</a>
+          <a class='button button--ghost' href='#cta'>Get Access</a>
         </header>
+
         <main>
-          <section class="hero reveal">
-            <div class="hero-text">
-              <span class="badge">Ship fast. Play faster.</span>
-              <h1>Launch a bold static site for your Flash game in one sprint.</h1>
-              <p>static-site-flash-game is a stylized landing kit for nostalgic arcade titles. Built for speed, tuned for hype, ready for launch.</p>
-              <div class="hero-actions">
-                <a class="button" href="#cta">Join the waitlist</a>
-                <a class="button button--ghost" href="#workflow">See workflow</a>
+          <section class='hero reveal'>
+            <div class='hero-text'>
+              <span class='badge'>Ship flash games at static speed</span>
+              <h1>Instant game pages. Zero server drama.</h1>
+              <p>Build, brand, and launch playable static game experiences with timer drops, scoreboards, and waitlist capture in one flow.</p>
+              <div class='hero-actions'>
+                <a class='button' href='#cta'>Join Waitlist</a>
+                <a class='button button--ghost' href='#workflow'>See Workflow</a>
               </div>
-              <div class="hero-meta">
-                <div>
-                  <strong>4.9/5</strong>
-                  <span>from 1,300 indie devs</span>
-                </div>
-                <div>
-                  <strong>72 hrs</strong>
-                  <span>avg launch time</span>
-                </div>
+              <div class='metrics'>
+                <div><strong>&lt; 60s</strong><span>to publish</span></div>
+                <div><strong>100%</strong><span>static deploy</span></div>
+                <div><strong id='waitlistCount'>217</strong><span>founders waiting</span></div>
               </div>
             </div>
-            <div class="hero-panel">
-              <div class="panel-card">
-                <div class="panel-top">
-                  <span class="panel-pill">Arcade Preview</span>
-                  <span class="panel-pill panel-pill--alt">Build 0.4.2</span>
-                </div>
-                <div class="panel-screen">
-                  <div class="pixel-grid"></div>
-                  <div class="pixel-grid pixel-grid--alt"></div>
-                  <div class="panel-score">
-                    <span>HIGH SCORE</span>
-                    <strong>88,420</strong>
-                  </div>
-                </div>
-                <div class="panel-footer">
-                  <div>
-                    <span>Mode</span>
-                    <strong>Story</strong>
-                  </div>
-                  <div>
-                    <span>Players</span>
-                    <strong>Single</strong>
-                  </div>
-                  <div>
-                    <span>Theme</span>
-                    <strong>Neon Burst</strong>
-                  </div>
-                </div>
-              </div>
+            <aside class='preview'>
+              <div class='preview__top'>Live Build Console</div>
+              <div class='preview__line'><span>✓</span> Theme tokens generated</div>
+              <div class='preview__line'><span>✓</span> Flash timer wired</div>
+              <div class='preview__line'><span>✓</span> Leaderboard seeded</div>
+              <div class='preview__line'><span>→</span> Deploying to edge nodes...</div>
+            </aside>
+          </section>
+
+          <section id='features' class='section reveal'>
+            <h2>Made for launch days</h2>
+            <div class='features-grid'>
+              <article class='card'><h3>Drop Timer</h3><p>Schedule release windows with visible urgency and auto unlock.</p></article>
+              <article class='card'><h3>Static Leaderboard</h3><p>Capture top scores with secure client proof and instant updates.</p></article>
+              <article class='card'><h3>Brand Studio</h3><p>Tune fonts, color systems, and layout presets without code churn.</p></article>
+              <article class='card'><h3>One File Export</h3><p>Bundle your game page for CDN, GitHub Pages, or Netlify.</p></article>
+              <article class='card'><h3>Waitlist Block</h3><p>Collect emails with local validation and analytics-ready hooks.</p></article>
+              <article class='card'><h3>Fast Iteration</h3><p>Ship variants fast with reusable components and token presets.</p></article>
             </div>
           </section>
 
-          <section id="features" class="features reveal">
-            <div class="section-title">
-              <p class="eyebrow">Features</p>
-              <h2>Everything you need to ship hype.</h2>
-            </div>
-            <div class="feature-grid">
-              <article class="feature-card">
-                <h3>Retro-ready layout</h3>
-                <p>Bold sections, layered orbs, and pixel motifs to fit classic arcade vibes.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Smart CTA flow</h3>
-                <p>Lead players from teaser to waitlist with animated reveal blocks.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Launch metrics</h3>
-                <p>Built-in stat blocks and badges to sell your game's traction.</p>
-              </article>
+          <section id='workflow' class='section reveal'>
+            <h2>Workflow</h2>
+            <div class='workflow'>
+              <article class='step'><span>01</span><h3>Choose a template</h3><p>Pick arcade, puzzle, or challenge layout and apply your brand kit.</p></article>
+              <article class='step'><span>02</span><h3>Wire game logic</h3><p>Attach scripts and score handlers with guided blocks.</p></article>
+              <article class='step'><span>03</span><h3>Launch globally</h3><p>Deploy to static hosting in one click and start collecting players.</p></article>
             </div>
           </section>
 
-          <section id="workflow" class="workflow reveal">
-            <div class="section-title">
-              <p class="eyebrow">Workflow</p>
-              <h2>From idea to drop in 3 moves.</h2>
-            </div>
-            <div class="steps">
-              <div class="step">
-                <span class="step-index">01</span>
-                <h3>Customize the story</h3>
-                <p>Swap in screenshots, add lore, set your soundtrack mood.</p>
-              </div>
-              <div class="step">
-                <span class="step-index">02</span>
-                <h3>Collect early players</h3>
-                <p>Drop your waitlist form and capture every email.</p>
-              </div>
-              <div class="step">
-                <span class="step-index">03</span>
-                <h3>Launch and iterate</h3>
-                <p>Ship updates fast with clean, static deployment.</p>
-              </div>
+          <section id='pricing' class='section reveal'>
+            <h2>Simple pricing</h2>
+            <div class='pricing'>
+              <article class='price-card'><h3>Starter</h3><p class='price'>$0</p><p>1 launch, basic branding, public badge.</p></article>
+              <article class='price-card featured'><h3>Studio</h3><p class='price'>$29</p><p>Unlimited launches, full branding, leaderboard pack.</p></article>
+              <article class='price-card'><h3>Pro Team</h3><p class='price'>$99</p><p>Team seats, advanced analytics, priority support.</p></article>
             </div>
           </section>
 
-          <section id="pricing" class="pricing reveal">
-            <div class="section-title">
-              <p class="eyebrow">Pricing</p>
-              <h2>Simple tiers for every studio.</h2>
-            </div>
-            <div class="pricing-grid">
-              <div class="price-card">
-                <h3>Indie</h3>
-                <p class="price">$19</p>
-                <ul>
-                  <li>1 launch page</li>
-                  <li>3 theme presets</li>
-                  <li>Basic analytics</li>
-                </ul>
-                <button class="button button--ghost">Get Indie</button>
-              </div>
-              <div class="price-card price-card--featured">
-                <h3>Studio</h3>
-                <p class="price">$49</p>
-                <ul>
-                  <li>3 launch pages</li>
-                  <li>Advanced presets</li>
-                  <li>Waitlist automation</li>
-                </ul>
-                <button class="button">Get Studio</button>
-              </div>
-              <div class="price-card">
-                <h3>Publisher</h3>
-                <p class="price">$99</p>
-                <ul>
-                  <li>Unlimited pages</li>
-                  <li>Custom theming</li>
-                  <li>Priority support</li>
-                </ul>
-                <button class="button button--ghost">Get Publisher</button>
-              </div>
-            </div>
-          </section>
-
-          <section id="cta" class="cta reveal">
-            <div class="cta-card">
-              <div>
-                <p class="eyebrow">Waitlist</p>
-                <h2>Be first in line for the retro drop.</h2>
-                <p>Join 8,420 builders already staging their arcade revival.</p>
-              </div>
-              <form class="waitlist" id="waitlist-form">
-                <input type="email" id="waitlist-email" placeholder="you@studio.com" required>
-                <button class="button" type="submit">Reserve spot</button>
-                <span class="form-note" id="form-note">No spam. Just launch updates.</span>
-              </form>
-            </div>
+          <section id='cta' class='section cta reveal'>
+            <h2>Join the early access list</h2>
+            <p>Get first access, template drops, and launch playbooks.</p>
+            <form id='waitlistForm' class='waitlist' novalidate>
+              <input id='waitlistEmail' type='email' name='email' placeholder='you@studio.com' required>
+              <button id='joinBtn' class='button' type='submit'>Request Access</button>
+            </form>
+            <p id='waitlistMsg' class='waitlist-msg' aria-live='polite'></p>
           </section>
         </main>
+
+        <footer class='footer reveal'>
+          <span>© <span id='year'></span> static-site-flash-game</span>
+          <span>Built for fast creators.</span>
+        </footer>
       </div>
     </div>
-    <script src="app.js"></script>
+
+    <script src='app.js'></script>
   </body>
 </html>

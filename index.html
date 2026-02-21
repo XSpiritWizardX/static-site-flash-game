@@ -29,80 +29,114 @@
 
         <main>
           <section class='hero reveal' id='top'>
-            <div class='hero-text'>
-              <span class='eyebrow'>build. ship. loop.</span>
-              <h1>Launch a playable flash-game site in a single sprint.</h1>
-              <p>Static-site-flash-game gives indie teams a fast, opinionated landing stack for browser mini-games: hero, trailer, waitlist, and analytics-ready CTAs.</p>
+            <div>
+              <p class='eyebrow'>Fast launch. Sharp visuals. Zero backend.</p>
+              <h1>Ship your flash game landing page in a single day.</h1>
+              <p class='lead'>A static-first product page that feels premium, runs fast, and converts players into early access signups.</p>
               <div class='hero-actions'>
                 <a class='button' href='#cta'>Join Waitlist</a>
                 <a class='button button--ghost' href='#workflow'>See Workflow</a>
               </div>
             </div>
             <div class='hero-panel'>
-              <p class='mono'>Current flash build</p>
-              <h3>Neon Railbreaker</h3>
-              <ul>
-                <li>Load time: <strong>0.9s</strong></li>
-                <li>Conversion lift: <strong>+38%</strong></li>
-                <li>Deploy: <strong>Static + CDN</strong></li>
-              </ul>
+              <div class='stat'>
+                <span>Load time</span>
+                <strong>&lt; 1s on modern hosting</strong>
+              </div>
+              <div class='stat'>
+                <span>Stack</span>
+                <strong>HTML + CSS + JS</strong>
+              </div>
+              <div class='stat'>
+                <span>Goal</span>
+                <strong>More wishlists before launch</strong>
+              </div>
             </div>
           </section>
 
           <section class='section reveal' id='features'>
-            <h2>What You Ship</h2>
-            <div class='cards'>
+            <div class='section-head'>
+              <p class='eyebrow'>Features</p>
+              <h2>Built to make your game look bigger than your team size.</h2>
+            </div>
+            <div class='grid grid--three'>
               <article class='card'>
-                <h3>Game-First Hero</h3>
-                <p>High-contrast layout tuned for trailer clips, GIF loops, and immediate CTA focus.</p>
+                <h3>Cinematic Hero</h3>
+                <p>Bold typography, layered gradients, and reveal motion to mimic a launch trailer vibe.</p>
+              </article>
+              <article class='card'>
+                <h3>Trust Signals</h3>
+                <p>Feature blocks and social-proof style stats arranged for immediate credibility.</p>
               </article>
               <article class='card'>
                 <h3>Waitlist Capture</h3>
-                <p>Email flow for closed-alpha drops with micro-interactions and clean confirmation states.</p>
-              </article>
-              <article class='card'>
-                <h3>Static Deploy</h3>
-                <p>No server dependency. Push to any host and go live in minutes with predictable performance.</p>
+                <p>Instant signup interaction with clear feedback and lightweight local persistence.</p>
               </article>
             </div>
           </section>
 
           <section class='section reveal' id='workflow'>
-            <h2>Workflow</h2>
-            <ol class='steps'>
-              <li><span>01</span> Drop your trailer and headline.</li>
-              <li><span>02</span> Connect analytics and campaign links.</li>
-              <li><span>03</span> Publish waitlist and test conversion.</li>
-            </ol>
+            <div class='section-head'>
+              <p class='eyebrow'>Workflow</p>
+              <h2>Three steps from concept to campaign-ready page.</h2>
+            </div>
+            <div class='grid'>
+              <article class='step'>
+                <span>01</span>
+                <h3>Define the hook</h3>
+                <p>Lead with one clear fantasy: what players feel in the first 10 seconds of gameplay.</p>
+              </article>
+              <article class='step'>
+                <span>02</span>
+                <h3>Frame the proof</h3>
+                <p>Show mechanics, visuals, and progress with concise content blocks that scan fast.</p>
+              </article>
+              <article class='step'>
+                <span>03</span>
+                <h3>Capture intent</h3>
+                <p>Use a focused call to action and early access form to turn excitement into signups.</p>
+              </article>
+            </div>
           </section>
 
           <section class='section reveal' id='pricing'>
-            <h2>Pricing</h2>
-            <div class='cards cards--pricing'>
-              <article class='card'>
-                <p class='mono'>Starter</p>
-                <h3>$0</h3>
-                <p>Core landing template + waitlist module.</p>
+            <div class='section-head'>
+              <p class='eyebrow'>Pricing</p>
+              <h2>Choose the pace that fits your launch window.</h2>
+            </div>
+            <div class='grid grid--three'>
+              <article class='card price'>
+                <h3>Starter</h3>
+                <p class='price-tag'>$0</p>
+                <p>Single-page setup for internal testing and initial feedback.</p>
               </article>
-              <article class='card card--featured'>
-                <p class='mono'>Studio</p>
-                <h3>$29<span>/mo</span></h3>
-                <p>Team blocks, experiment variants, and campaign presets.</p>
+              <article class='card price featured'>
+                <h3>Launch</h3>
+                <p class='price-tag'>$49</p>
+                <p>Production-ready visuals, motion reveals, and waitlist integration.</p>
+              </article>
+              <article class='card price'>
+                <h3>Studio</h3>
+                <p class='price-tag'>$149</p>
+                <p>Advanced sections, analytics hooks, and ongoing iteration support.</p>
               </article>
             </div>
           </section>
 
           <section class='cta reveal' id='cta'>
-            <h2>Get Early Access</h2>
-            <p>Be first to test new flash-game launch kits.</p>
-            <form id='waitlist-form' novalidate>
-              <label class='sr-only' for='email'>Email</label>
-              <input id='email' name='email' type='email' placeholder='you@studio.com' required>
+            <p class='eyebrow'>Early Access</p>
+            <h2>Get first build access before public release.</h2>
+            <form class='waitlist' data-waitlist>
+              <input type='email' name='email' placeholder='you@studio.com' aria-label='Email address' required>
               <button class='button' type='submit'>Join Waitlist</button>
             </form>
-            <p id='form-status' class='mono' aria-live='polite'></p>
+            <p class='form-message' aria-live='polite'></p>
           </section>
         </main>
+
+        <footer class='footer reveal'>
+          <p>© <span id='year'></span> static-site-flash-game</p>
+        </footer>
       </div>
     </div>
   </body>
